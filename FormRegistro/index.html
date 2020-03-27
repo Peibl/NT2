@@ -7,8 +7,13 @@
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.mask.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/application.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="js/Helper.js"></script>
 
-	<!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"-->
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
@@ -20,97 +25,108 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-8">
-      <form name="registro" onsubmit="return validarForm(event);">
-
-      	<div class="row">
-    		<div class="col-6">
-			  <div class="form-group">
-			    <label for="txtNombre">Nombre</label>
-			    <div class="input-group mb-3">
-			    	<div class="input-group-prepend">
-				    	<span class="input-group-text" id="basic-addon1">
-				    		<i class="fas fa-address-book text-primary"></i>
-				    	</span>
-				  	</div>
-			    	<input type="text" class="form-control" id="txtNombre" placeholder="Ingrese su nombre" name="nombre" data-info="Completa la información de este campo para continuar">
-			    	<!--i class="fas fa-question-circle" data-toggle="tooltip" title="Tooltip on bottom"></i-->
-			    </div>
-			  </div>
+	  <form name="Siguiente" onsubmit="return validarForm(event);">
+	
+		<div id="pnlDatosPersonales">
+		
+			<div class="form-group">
+				<label for="cboNac">Nacionalidad </label>
+				<select class="form-control" id="cmbProvincia" onchange="checkPronvincia(event, this)">
+					<option value="" data-ort="no hay nada">Seleccionar Pais</option>
+					<option value="argen">Argentino/a</option>
+					<option value="boliv">Boliviano/a</option>
+					<option value="chilen">Chileno/a</option>
+					<option value="brasil">Brasilero/a</option>
+				</select>
 			</div>
-			<div class="col-6">
-			  <div class="form-group">
-			    <label for="txtApellido">Apellido</label>
-			    <div class="input-group mb-3">
-			    	<div class="input-group-prepend">
-				    	<span class="input-group-text" id="basic-addon1">
-				    		<i class="fas fa-address-book text-primary"></i>
-				    	</span>
-				  	</div>
-			    	<input type="text" class="form-control" id="txtApellido" placeholder="Ingreso su Apellido" data-info="Completa la información de este campo para continuar">
-			    </div>
-			  </div>
-			</div>
-		</div>
-
-	  <div class="form-group">
-	    <label for="txtDni">DNI </label>
-	    <div class="input-group mb-3">
-	    	<div class="input-group-prepend">
-		    	<span class="input-group-text" id="basic-addon1">
-		    		<i class="fas fa-id-card text-primary"></i>
-		    	</span>
-		  	</div>
-	    	<input type="text" class="form-control" id="txtDni" placeholder="Ingreso su DNI" data-info="Completa la información de este campo para continuar">
-	    </div>
-	  </div>
-		  
-		  <div class="form-group">
-		    <label for="cmbProvincia">Provincia </label>
-		    <select class="form-control" id="cmbProvincia" onchange="checkPronvincia(event, this)">
-	    		<option value="" data-ort="no hay nada">Seleccionar Provincia</option>
-				<option value="ciudad" data-ort="data adiconal">Ciudad de Buenos Aires</option>
-				<option value="buenos-aires">Buenos Aires</option>
-				<option value="santa-fe">Santa Fe</option>
-				<option value="la-pampa">La Pampa</option>
-				<option value="mendoza">Mendoza</option>
-		    </select>
-		  </div>
-
-		  <div class="form-group" style="display:none;">
-		    <label for="cmbLocalidad">Localidad</label>
-		    <select class="form-control" id="cmbLocalidad" name="cmbLocalidad">
-				<option value="retiro">Retiro</option>
-				<option value="nunez">Nuñez</option>
-				<option value="villa-del-parque">Villa del Parque</option>
-				<option value="monte-castro">Monte Castro</option>
-				<option value="caballito">Caballito</option>
-		    </select>
-		  </div>
-
-		  <div class="form-group">
-		    <label for="txtEmail">E-Mail </label>
-		    <div class="input-group mb-3">
-		    	<div class="input-group-prepend">
-
-			    	<span class="input-group-text" id="basic-addon1">
-			    		<i class="fas fa-at text-primary"></i>
-			    	</span>
-			  	</div>
-		    	<input type="email" class="form-control" id="txtEmail" placeholder="Ingreso su Correo Electronico">
-		    </div>
-		  </div>
+			
+				<div class="form-group">
+					<label for="cboGen">Genero </label>
+					<select class="form-control" id="cmbProvincia" onchange="checkPronvincia(event, this)">
+						<option value="" data-ort="no hay nada">Seleccionar Genero</option>
+						<option value="masculino">Masculino</option>
+						<option value="femenino">Femenino</option>
+					</select>
+				</div>
+			
+			<button id="primerSig" type="button" class="btn btn-info">Siguiente</button>
 
 			<div class="form-group">
-			    <label for="txtEmail">Teléfono</label>
-			    <div class="input-group mb-3">
-			    	<div class="input-group-prepend">
-				    	<span class="input-group-text" id="basic-addon1">
-				    		<i class="fas fa-phone text-primary"></i>
-				    	</span>
-				  	</div>
-			    	<input type="text" class="form-control" id="txtphone" placeholder="Número de teléfono">
-			    </div>
-			  </div>
+				<label for="cboDocType">Tipo de Documento </label>
+				<select class="form-control" id="cmbProvincia" onchange="checkPronvincia(event, this)">
+					<option value="" data-ort="no hay nada">Seleccionar Tipo de Documento</option>
+					<option value="dni">DNI</option>
+					<option value="libCiv">Libreta Civica</option>
+					<option value="cedula">Cedula Extranjera</option>
+					<option value="libEnrol">Libreta de Enrolamiento</option>
+				</select>
+				</div>
+
+			<div class="form-group">
+				<label for="txtDni">Numero de Documento </label>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">
+							<i class="fas fa-id-card text-primary"></i>
+						</span>
+					</div>
+					<input type="text" class="form-control" id="txtDni" placeholder="Ingreso su DNI" data-info="Completa la información de este campo para continuar">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+				<div class="form-group">
+					<label for="txtNom">Nombre y Apellido</label>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">
+								<i class="fas fa-address-book text-primary"></i>
+							</span>
+						</div>
+						<input type="text" class="form-control" id="txtNom" placeholder="Ingrese su nombre" name="nombre" data-info="Completa la información de este campo para continuar">
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="txtNroTram">Nro. de Trámite </label>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">
+							<i class="fas fa-id-card text-primary"></i>
+						</span>
+					</div>
+					<input type="text" class="form-control" id="txtNroTram" ata-info="Completa la información de este campo para continuar">
+				</div>
+			</div>
+
+				<div class="form-group">
+					<label for="txtEmail">Teléfono</label>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">
+								<i class="fas fa-phone text-primary"></i>
+							</span>
+						</div>
+						<input type="text" class="form-control" id="txtphone" placeholder="Número de teléfono">
+					</div>
+				</div>
+		</div> <!-- pnlDatosPersonales  -->
+
+		<div id="pnlDDomic">
+			<!-- Your Code -->
+		</div> <!-- pnlDatosDomicilio  -->
+		<div id="pnlDContacto">
+			<!-- Your Code -->
+		</div> <!-- pnlDContacto  -->
+		<div id="pnlDLaborales">
+			<!-- Your Code -->
+		</div> <!-- pnlDLaborales  -->
+		<div id="pnlMotivo">
+			<!-- Your Code -->
+		</div> <!-- pnlMotivo  -->
 
 			<div class="form-check">
 			  <input class="form-check-input" type="checkbox" value="" id="chkTerms">
@@ -119,14 +135,14 @@
 			  </label>
 			</div>
 
-		  <button type="submit" class="btn btn-primary mt-3">Enviar Registro</button>
+		  <button type="submit" class="btn btn-primary mt-3">Siguiente</button>
 		</form>
     </div>
-    <div class="col bg-dark text-light">
+    <!-- <div class="col bg-dark text-light">
     	<div class="text-warning">
     		<p id="helpInfo">Informaci&oacute;n adicional</p>
     	</div>
-    </div>
+	</div> -->
   </div>
   <div class="mt-3"></div>
   <!-- Modal -->
@@ -158,8 +174,4 @@
   </div>
 </div>
 </body>
-<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.mask.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/application.js" type="text/javascript" charset="utf-8" async defer></script>
 </html>
