@@ -4,3 +4,4 @@
 .env.php
 .DS_Store
 .phpintel/
+.vscode/
