@@ -1,14 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
 
 	<title>Formulario de Registro</title>
-	
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/proper-style.css">	
+	<link rel="stylesheet" href="css/proper-style.css">
 
 	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
@@ -17,293 +18,280 @@
 	<script src="js/Helper.js"></script>
 
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <a class="navbar-brand text-white" href="#">Formulario de Registro</a>
-</nav>
-<div class="progress">
-	<div class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+		<a class="navbar-brand text-white" href="#">Formulario de Registro</a>
+	</nav>
+	<div class="progress">
+		<div class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+		</div>
+	</div>
 	<div class="container mt-3">
 		<div class="row">
 			<div class="col-8">
 				<!-- <form name="Siguiente" onsubmit="returnValidarForm(event);"> -->
 
-					<div class="panel-group" id="accordion">						
-						<div id="pnlFormulario" class="panel panel-default">
-							
-							<div id="headerDP" class="panel-heading" >
-								<h4 class="panel-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pnlDatosPersonales">
-										Datos Personales
-									</a>
-								</h4>
-							</div>
-							<div id="pnlDatosPersonales" class="panel-collapse collapse show">
-								
-								<div class="panel-body">	
+				<div class="panel-group" id="accordion">
+					<div id="pnlFormulario" class="panel panel-default">
 
-										<div class="form-group">
-											<label for="cboNac">Nacionalidad </label>
-											<select class="form-control" id="cboNac">
-												<option value="" data-ort="no hay nada">Seleccionar Pais</option>
-											</select>
-										</div>
-										
-										<div class="form-group">
-											<label for="cboGen">Genero </label>
-											<select class="form-control" id="cboGen">
-												<option value="" data-ort="no hay nada">Seleccionar Genero</option>
-											</select>
-										</div>
-						
-										<div class="form-group">
-											<label for="cboDocType">Tipo de Documento </label>
-											<select class="form-control" id="cboDocType">
-												<option value="" data-ort="no hay nada">Seleccionar Tipo de Documento</option>
-											</select>
-										</div>
-						
-										<div class="form-group">
-											<label for="txtDni">Numero de Documento </label>
-											<div class="input-group mb-3">
-												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1">
-														<i class="fas fa-id-card text-primary"></i>
-													</span>
-												</div>
-												<input type="text" class="form-control" id="txtDni" placeholder="Ingreso su DNI" data-info="Completa la información de este campo para continuar">
-											</div>
-										</div>
-						
-										<div class="row">
-											<div class="col-6">
-											<div class="form-group">
-												<label for="txtNom">Nombre y Apellido</label>
-												<div class="input-group mb-3">
-													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1">
-															<i class="fas fa-address-book text-primary"></i>
-														</span>
-													</div>
-													<input type="text" class="form-control" id="txtNom" placeholder="Ingrese su nombre" name="nombre" data-info="Completa la información de este campo para continuar">
-												</div>
-											</div>
-											</div>
-										</div>
-						
-										<div class="form-group">
-											<label for="txtNroTram">Nro. de Trámite </label>
-											<div class="input-group mb-3">
-												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1">
-														<i class="fas fa-id-card text-primary"></i>
-													</span>
-												</div>
-												<input type="text" class="form-control" id="txtNroTram" ata-info="Completa la información de este campo para continuar">
-											</div>
-										</div>
-						
-										<div class="form-group">
-											<label for="txtphone">Teléfono</label>
-											<div class="input-group mb-3">
-												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1">
-														<i class="fas fa-phone text-primary"></i>
-													</span>
-												</div>
-												<input type="text" class="form-control" id="txtphone" placeholder="Número de teléfono">
-											</div>
-										</div>										
+						<div id="headerDP" class="panel-heading">
+							<h4 class="panel-title">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+									href="#pnlDatosPersonales">
+									Datos Personales
+								</a>
+							</h4>
+						</div>
+						<div id="pnlDatosPersonales" class="panel-collapse collapse show">
+
+							<div class="panel-body">
+
+								<div class="form-group">
+									<label for="cboNac">Nacionalidad </label>
+									<select class="form-control" id="cboNac">
+										<option value="" data-ort="no hay nada">Seleccionar Pais</option>
+									</select>
 								</div>
-							</div>
-						
-							<div id="headerDomi" class="panel-heading ">
-								<h4 class="panel-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pnlDomi">
-										Datos Domicilio
-									</a>
-								</h4>
-							</div>
-							<div id="pnlDomi" class="panel-collapse collapse">
-								<div class="panel-body">
 
-									<div class="form-group">
-										<label for="txtCalle">Calle</label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<!-- <span class="input-group-text" id="basic-addon1"> -->
-													<!-- <i class="fas fa-home text-primary"></i> -->
-												<!-- </span> -->
+								<div class="form-group">
+									<label for="cboGen">Genero </label>
+									<select class="form-control" id="cboGen">
+										<option value="" data-ort="no hay nada">Seleccionar Genero</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="cboDocType">Tipo de Documento </label>
+									<select class="form-control" id="cboDocType">
+										<option value="" data-ort="no hay nada">Seleccionar Tipo de Documento</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="txtDni">Numero de Documento </label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class="fas fa-id-card text-primary"></i>
+											</span>
+										</div>
+										<input type="text" class="form-control" id="txtDni" placeholder="Ingreso su DNI"
+											data-info="Completa la información de este campo para continuar">
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label for="txtNom">Nombre y Apellido</label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text" id="basic-addon1">
+														<i class="fas fa-address-book text-primary"></i>
+													</span>
+												</div>
+												<input type="text" class="form-control" id="txtNom"
+													placeholder="Ingrese su nombre" name="nombre"
+													data-info="Completa la información de este campo para continuar">
 											</div>
-											<input type="text" class="form-control" id="txtCalle" placeholder="Ingrese la calle">
 										</div>
 									</div>
+								</div>
 
-									
-			<div class="form-group">
-				<label for="txtAltura">Altura</label>
-				<div class="input-group mb-3">
-					<div class="input-group-prepend">
-						<!-- <span class="input-group-text" id="basic-addon1"> -->
-							<!-- <i class="fas fa- text-primary"></i> -->
-						<!-- </span>		 -->
-					</div>
-					<input type="text" class="form-control" id="txtAltura" placeholder="Ingrese la altura">
-				</div>
-			</div>
+								<div class="form-group">
+									<label for="txtNroTram">Nro. de Trámite </label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class="fas fa-id-card text-primary"></i>
+											</span>
+										</div>
+										<input type="text" class="form-control" id="txtNroTram"
+											ata-info="Completa la información de este campo para continuar">
+									</div>
+								</div>
 
-			<div class="form-group">
-				<label for="txtPisoDpto">Piso/Dpto</label>
-				<div class="input-group mb-3">
-					<div class="input-group-prepend">
-						<!-- <span class="input-group-text" id="basic-addon1">
+								<div class="form-group">
+									<label for="txtphone">Teléfono</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class="fas fa-phone text-primary"></i>
+											</span>
+										</div>
+										<input type="text" class="form-control" id="txtphone"
+											placeholder="Número de teléfono">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="headerDomi" class="panel-heading ">
+							<h4 class="panel-title">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+									href="#pnlDomi">
+									Datos Domicilio
+								</a>
+							</h4>
+						</div>
+						<div id="pnlDomi" class="panel-collapse collapse">
+							<div class="panel-body">
+
+								<div class="form-group">
+									<label for="txtCalle">Calle</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<!-- <span class="input-group-text" id="basic-addon1"> -->
+											<!-- <i class="fas fa-home text-primary"></i> -->
+											<!-- </span> -->
+										</div>
+										<input type="text" class="form-control" id="txtCalle"
+											placeholder="Ingrese la calle">
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<label for="txtAltura">Altura</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<!-- <span class="input-group-text" id="basic-addon1"> -->
+											<!-- <i class="fas fa- text-primary"></i> -->
+											<!-- </span>		 -->
+										</div>
+										<input type="text" class="form-control" id="txtAltura"
+											placeholder="Ingrese la altura">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="txtPisoDpto">Piso/Dpto</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<!-- <span class="input-group-text" id="basic-addon1">
 							<i class="fas fa- text-primary"></i>
 						</span>		 -->
-					</div>
-					<input type="text" class="form-control" id="txtPisoDpto" placeholder="Ingrese piso / dpto">
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="cboNac">Provincia </label>
-				<select class="form-control" id="cmbProvincia" onchange="checkPronvincia(event, this)">
-					<option value="" data-ort="no hay nada">Seleccionar provncia</option>
-					<option value="Buenos Aires">Buenos Aires</option>
-					<option value="Catamarca">Catamarca</option>
-					<option value="Chaco">Chaco</option>
-					<option value="Chubut">Chubut</option>
-					<option value="Córdoba">Córdoba</option>
-					<option value="Corrientes">Corrientes</option>
-					<option value="Entre Ríos">Entre Ríos</option>
-					<option value="Formosa">Formosa</option>
-					<option value="Jujuy">Jujuy</option>
-					<option value="La Pampa">La Pampa</option>
-					<option value="La Rioja">La Rioja</option>
-					<option value="Mendoza">Mendoza</option>
-					<option value="Misiones">Misiones</option>
-					<option value="Neuquén">Neuquén</option>
-					<option value="Río Negro">Río Negro</option>
-					<option value="Salta">Salta</option>
-					<option value="San Juan">San Juan</option>
-					<option value="Santa Cruz">Santa Cruz</option>
-					<option value="Santa Fe">Santa Fe</option>
-					<option value="Santiago del Estero">Santiago</option> del Estero
-					<option value="Tierra del Fuego">Tierra del Fuego</option>
-					<option value="Tucumán">Tucumán</option>
-
-				</select>
-			</div>
-		
-			<div class="form-group">
-				<label for="cboNac">Ciudad</label>
-				<select class="form-control" id="cmbProvincia" onchange="checkPronvincia(event, this)">
-					<option value="" data-ort="no hay nada">Seleccionar ciudad</option>
-					<option value="argen"></option>
-					<option value="boliv"></option>
-					<option value="chilen"></option>
-					<option value="brasil"></option>
-				</select>
-			</div>
-
-
-
-									
-
-
-
-								</div>
-							</div>
-
-							<div id="headerContacto" class="panel-heading">
-								<h4 class="panel-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pnlContacto">
-										Datos Contacto
-									</a>
-								</h4>
-							</div>
-							<div id="pnlContacto" class="panel-collapse collapse">
-								<div class="panel-body">
-									<!-- Your Code -->
-									<div class="form-group">
-										<label for="txtEmail">DELETE DIV FORM-GROUP</label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1">
-													<i class="fas fa-phone text-primary"></i>
-												</span>
-											</div>
-											<input type="text" class="form-control" id="txtphone" placeholder="Número de teléfono">
 										</div>
-									</div>	
-								</div>
-							</div>
-							
-						
-							<div id="headerDLaborales" class="panel-heading">
-								<h4 class="panel-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pnlDLaborales">
-										Datos Laborales
-									</a>
-								</h4>
-							</div>
-							<div id="pnlDLaborales" class="panel-collapse collapse">
-								<div class="panel-body">
-									<!-- Your Code -->
-									<div class="form-group">
-										<label for="txtEmail">DELETE DIV FORM-GROUP</label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1">
-													<i class="fas fa-phone text-primary"></i>
-												</span>
-											</div>
-											<input type="text" class="form-control" id="txtphone" placeholder="Número de teléfono">
-										</div>
+										<input type="text" class="form-control" id="txtPisoDpto"
+											placeholder="Ingrese piso / dpto">
 									</div>
 								</div>
-							</div>	
 
-							<div id="headerMotivo" class="panel-heading">
-								<h4 class="panel-title">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pnlMotivo">
-										Datos Motivo
-									</a>
-								</h4>
+								<div class="form-group">
+									<label for="provincia">Provincia </label>
+									<select class="form-control" id="provincia"
+										<option value="" data-ort="no hay nada">Seleccionar provncia</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="ciudad">Ciudad</label>
+									<select class="form-control" id="ciudad"
+										<option value="" data-ort="no hay nada">Seleccionar ciudad</option>
+									</select>
+								</div>
+
 							</div>
-							<div id="pnlMotivo" class="panel-collapse collapse">
-								<div class="panel-body">
-									<!-- Your Code -->
-									<div class="form-group">
-										<label for="txtEmail">DELETE DIV FORM-GROUP</label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1">
-													<i class="fas fa-phone text-primary"></i>
-												</span>
-											</div>
-											<input type="text" class="form-control" id="txtphone" placeholder="Número de teléfono">
+						</div>
+
+						<div id="headerContacto" class="panel-heading">
+							<h4 class="panel-title">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+									href="#pnlContacto">
+									Datos Contacto
+								</a>
+							</h4>
+						</div>
+						<div id="pnlContacto" class="panel-collapse collapse">
+							<div class="panel-body">
+								<!-- Your Code -->
+								<div class="form-group">
+									<label for="txtEmail">DELETE DIV FORM-GROUP</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class="fas fa-phone text-primary"></i>
+											</span>
 										</div>
+										<input type="text" class="form-control" id="txtphone"
+											placeholder="Número de teléfono">
 									</div>
 								</div>
-							</div> <!-- pnlMotivo  -->
+							</div>
 						</div>
-					</div> <!-- Fin panel accordion  -->
-		
-					<div id="formFooter">
-						<div id="divTIC" class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="chkTerms">
-								<label class="form-check-label" for="chkTerms">
-									Aceptar <a href="javascript:void();" data-toggle="modal" data-target="#exampleModal">Terminos y Condiciones</a>
-								</label>
+
+
+						<div id="headerDLaborales" class="panel-heading">
+							<h4 class="panel-title">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+									href="#pnlDLaborales">
+									Datos Laborales
+								</a>
+							</h4>
 						</div>
-	
-						<button id="btnSubmitFinal" type="submit" class="btn btn-primary mt-3 btnSig" onclick="validateForm(event)" >Enviar Formulario</button>
+						<div id="pnlDLaborales" class="panel-collapse collapse">
+							<div class="panel-body">
+								<!-- Your Code -->
+								<div class="form-group">
+									<label for="txtEmail">DELETE DIV FORM-GROUP</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class="fas fa-phone text-primary"></i>
+											</span>
+										</div>
+										<input type="text" class="form-control" id="txtphone"
+											placeholder="Número de teléfono">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="headerMotivo" class="panel-heading">
+							<h4 class="panel-title">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+									href="#pnlMotivo">
+									Datos Motivo
+								</a>
+							</h4>
+						</div>
+						<div id="pnlMotivo" class="panel-collapse collapse">
+							<div class="panel-body">
+								<!-- Your Code -->
+								<div class="form-group">
+									<label for="txtEmail">DELETE DIV FORM-GROUP</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">
+												<i class="fas fa-phone text-primary"></i>
+											</span>
+										</div>
+										<input type="text" class="form-control" id="txtphone"
+											placeholder="Número de teléfono">
+									</div>
+								</div>
+							</div>
+						</div> <!-- pnlMotivo  -->
 					</div>
+				</div> <!-- Fin panel accordion  -->
+
+				<div id="formFooter">
+					<div id="divTIC" class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="chkTerms">
+						<label class="form-check-label" for="chkTerms">
+							Aceptar <a href="javascript:void();" data-toggle="modal"
+								data-target="#exampleModal">Terminos y Condiciones</a>
+						</label>
+					</div>
+
+					<button id="btnSubmitFinal" type="submit" class="btn btn-primary mt-3 btnSig"
+						onclick="validateForm(event)">Enviar Formulario</button>
 				</div>
+			</div>
 		</div> <!-- pnlDatosPersonales  -->
 
-		
+
 		<div id="pnlDContacto">
 			<!-- Your Code -->
 
@@ -316,42 +304,56 @@
 			<!-- Your Code -->
 		</div> <!-- pnlMotivo  -->
 
-			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" value="" id="chkTerms">
-			  <label class="form-check-label" for="chkTerms">
-			    Aceptar <a href="javascript:void();" data-toggle="modal" data-target="#exampleModal">Terminos y Condiciones</a>
-			  </label>
-				<!-- </form> -->
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="chkTerms">
+			<label class="form-check-label" for="chkTerms">
+				Aceptar <a href="javascript:void();" data-toggle="modal" data-target="#exampleModal">Terminos y
+					Condiciones</a>
+			</label>
+			<!-- </form> -->
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Terminos y condiciones</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					El usuario (en adelante el “Usuario y/o Ciudadano”) entiende que el acceso y uso de tales Activos
+					Digitales resultará en la aceptación de los presentes Términos y Condiciones. Asimismo, el Usuario
+					entiende que acepta la Política de Privacidad, anexo a los presentes Términos y Condiciones.
+
+					Capacidad para aceptar estos Términos y Condiciones
+					Usted afirma ser mayor de 18 años, menor emancipado o que posee permiso legal de sus padres y/o
+					tutor y que está completamente habilitado y es competente para entender y aceptar sin reservas las
+					obligaciones, afirmaciones, representaciones y garantías establecidas en estos Términos y
+					Condiciones.
+
+					Los Activos Digitales utilizan información provista directamente por los Usuarios, información
+					suministrada por terceros e información cedida a la Subsecretaría de Gobierno Digital por otros
+					Organismos en los términos de lo dispuesto por la Ley de Protección de Datos Personales, Nº Ley
+					25.326. En este último caso, la Subsecretaría de Gobierno Digital no es responsable por daños y/o
+					perjuicios que pudieran generarse por errores en la información cedida por dichos Organismos.
+
+					Derecho Aplicable y Jurisdicción
+					Los presentes Términos y Condiciones se rigen por las leyes de la República Argentina.
+					En caso de surgir cualquier controversia respecto de la interpretación o cumplimiento de los
+					presentes, la misma será dirimida por los Tribunales en lo Contencioso Administrativo Federal con
+					asiento en la Capital Federal.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
-
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Terminos y condiciones</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<div class="modal-body">
-			El usuario (en adelante el “Usuario y/o Ciudadano”) entiende que el acceso y uso de tales Activos Digitales resultará en la aceptación de los presentes Términos y Condiciones. Asimismo, el Usuario entiende que acepta la Política de Privacidad, anexo a los presentes Términos y Condiciones.
-
-			Capacidad para aceptar estos Términos y Condiciones
-			Usted afirma ser mayor de 18 años, menor emancipado o que posee permiso legal de sus padres y/o tutor y que está completamente habilitado y es competente para entender y aceptar sin reservas las obligaciones, afirmaciones, representaciones y garantías establecidas en estos Términos y Condiciones.
-
-					Los Activos Digitales utilizan información provista directamente por los Usuarios, información suministrada por terceros e información cedida a la Subsecretaría de Gobierno Digital por otros Organismos en los términos de lo dispuesto por la Ley de Protección de Datos Personales, Nº Ley 25.326. En este último caso, la Subsecretaría de Gobierno Digital no es responsable por daños y/o perjuicios que pudieran generarse por errores en la información cedida por dichos Organismos.
-
-			Derecho Aplicable y Jurisdicción
-			Los presentes Términos y Condiciones se rigen por las leyes de la República Argentina.
-			En caso de surgir cualquier controversia respecto de la interpretación o cumplimiento de los presentes, la misma será dirimida por los Tribunales en lo Contencioso Administrativo Federal con asiento en la Capital Federal.
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		</div>
-		</div>
-	</div>
 	</div>
 </body>
+
 </html>
