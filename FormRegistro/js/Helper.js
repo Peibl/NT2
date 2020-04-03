@@ -3,6 +3,27 @@ $(document).ready(function() {
   populateCbo('cboNac');
   populateCbo('cboGen');
   populateCbo('cboDocType');
+  populateCbo('provincia'); 
+  $("#provincia").change(function(){
+    $("#ciudad").empty();
+    populateCbo("ciudad");
+
+  });
+  if(isCheckedById("cbox1")){
+    $("#matri").show();
+  }else{
+    $("#matri").hide();
+  };
+  $("#cbox1").change(function(){
+    console.log($("#cbox1").val());
+    if(isCheckedById("cbox1")){
+      $("#matri").show();
+    }else{
+      $("#matri").hide();
+    };
+
+  });
+
 });
 
 // Funciona para validar los formularios al momento de dar el OK final al formulario.
@@ -54,7 +75,15 @@ function validateForm(){
 // Se utilizo esta logica, para tener en cuenta los combos que se cargan por dependencia, como por
 // ejemplo, Pais > Localidad, etc. En cuyo caso, habria que generar un evento dentro del .Ready ^
 // y en cambio del combo, triggerear la funcion.
+function isCheckedById(id) {
+  var checked = $('#' + id).is(":checked");
 
+  if (checked) {
+      return true;
+  } else {
+      return false;
+  }
+}
 function populateCbo(cboName){
 
   var arrayList;
@@ -80,6 +109,54 @@ function populateCbo(cboName){
                     {"Id": 3, "Name": "Cedula Extranjera"}, 
                     {"Id": 4, "Name": "Libreta de Enrolamiento"}	
                   ];
+      break;
+    case 'provincia':
+      arrayList = [
+                    {"Id": 1, "Name": "Jujuy"}, 
+                    {"Id": 2, "Name": "Buenos Aires"},
+                    {"Id": 3, "Name": "Neuquen"}, 
+                    {"Id": 4, "Name": "Santa fe"}	
+                  ];
+    break;
+    case 'ciudad':
+      let ref=$("#provincia").val(); 
+      let ref2=parseInt(ref, 10);   
+      switch(ref2){
+        case 1:
+          console.log(ref2);
+          arrayList = [
+            {"Id": 1, "Name": "Jujuy1"}, 
+            {"Id": 2, "Name": "Jujuy2"},
+            {"Id": 3, "Name": "Jujuy3"}, 
+            {"Id": 4, "Name": "Jujuy4"}	
+          ];
+          console.table(arrayList);
+          break;
+       case 2:
+            arrayList = [
+                {"Id": 1, "Name": "Baires1"}, 
+                {"Id": 2, "Name": "Baires2"},
+                {"Id": 3, "Name": "Baires3"}, 
+                {"Id": 4, "Name": "Baires4"}	
+              ];
+              break;
+      case 3:
+         arrayList = [
+              {"Id": 1, "Name": "Neuquen1"}, 
+              {"Id": 2, "Name": "Neuquen2"},
+              {"Id": 3, "Name": "Neuquen3"}, 
+              {"Id": 4, "Name": "Neuquen4"}	
+             ];
+             break;
+      case 4:
+       arrayList = [
+           {"Id": 1, "Name": "Santafe1"}, 
+           {"Id": 2, "Name": "Santafe2"},
+           {"Id": 3, "Name": "Santafe3"}, 
+           {"Id": 4, "Name": "Santafe4"}	
+           ];
+           break;       
+      }
       break;
   }   
 
